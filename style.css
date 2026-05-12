@@ -208,6 +208,10 @@ p {
 	margin: 10px 0 0 0;
 	font-family: Helvetica, sans-serif;
 }
+main a {
+	color: var(--accent-color);
+	font-family: Helvetica, sans-serif;
+}
 em {
 	color: var(--text-color);
 	text-align: justify;
@@ -240,6 +244,8 @@ table, th, td {
 }
 table {
 	background: var(--main-color);
+	width: 95%;
+	margin: 5px auto;
 }
 th, td {
 	padding: 3px;
@@ -257,10 +263,17 @@ td {
 	display: block;
 	margin: 10px auto 0;
 }
-#leveling_section {
-	grid-column: 1 / -1;
+#combat_guide_lists_div {
+	display: flex;
+	justify-content: space-around;
+}
+#weapon_section {
+	grid-area: 2 / 2 / span 3 / -1;
 }
 #core_tiers_div {
 	display: flex;
 	justify-content: space-around;
+}
+#core_tiers_div div {
+	width: 48%;
 }
