@@ -53,6 +53,44 @@
 					<li>If you want something or need help, please ask!</li>
 				</ol>
 			</section>
+			<section id="combat_guide_section">
+				<h2>Combat Guide</h2>
+				<hr>
+				<p>This is a quick reference to the basics of combat. For more depth, go to <a href="https://roll20.net/compendium/dnd5e/Combat#content">Roll20's Combat Compendium</a>.</p>
+				<div id="combat_guide_lists_div">
+					<div>
+						<h3>Basic Actions</h3>
+						<ul>
+							<li>Attack</li>
+							<li>Cast</li>
+							<li>Dash</li>
+							<li>Disengage</li>
+							<li>Dodge</li>
+							<li>Help</li>
+							<li>Hide</li>
+							<li>Ready</li>
+							<li>Search</li>
+							<li>Use</li>
+						</ul>
+					</div>
+					<div>
+						<h3>Special Attacks (Replaces an Attack)</h3>
+						<ul>
+							<li>Grapple</li>
+							<li>Shove</li>
+							<li>Disarm</li>
+						</ul>
+						<h3>Quick Interactions (Don't Require Action)</h3>
+						<ul>
+							<li>Quick Interaction</li>
+							<li>Communicate</li>
+							<li>Basic Search</li>
+						</ul>
+					</div>
+				</div>
+				<h3>Takedowns</h3>
+				<p>It is possible to perform an instant takedown on a target within your core tier or lower. This can be done lethaly or non-lethaly. This cannot be done while in combat.</p>
+			</section>
 			<section id="leveling_section">
 				<h2>Leveling Up</h2>
 				<hr>
@@ -64,19 +102,241 @@
 				<div id="core_tiers_div">
 					<div>
 						<h3>Martial Core Tiers</h3>
-						<p>Tier 1 - Normal (Levels 0+)</p>
-						<p>Tier 2 - Origin (Levels 5+)</p>
-						<p>Tier 3 - Crest (Levels 11+)</p>
-						<p>Tier 4 - Zenith (Levels 17+)</p>
+						<p>-- Tier 1 - Normal (Levels 0+) --</p>
+						<p>You are a typical martial.</p>
+						<br>
+						<p>-- Tier 2 - Origin (Levels 5+) --</p>
+						<p>Your core grows in power and slightly changes your body. Decide what this change is and a passive ability it would give you.</p>
+						<br>
+						<p>-- Tier 3 - Crest (Levels 11+) --</p>
+						<p>Your lived experiences manifest in an evolved bond between your body and your core. Design a unique ability that has a magical and physical effect.</p>
+						<br>
+						<p>-- Tier 4 - Zenith (Levels 17+) --</p>
+						<p>Your body, soul, and core form a gestalt. You gain a legendary resistance. You can ascend.</p>
 					</div>
 					<div>
 						<h3>Caster Core Tiers</h3>
-						<p>Tier 1 - Normal (Levels 0+)</p>
-						<p>Tier 2 - Origin (Levels 5+)</p>
-						<p>Tier 3 - Crest (Levels 11+)</p>
-						<p>Tier 4 - Zenith (Levels 17+)</p>
+						<p>-- Tier 1 - Normal (Levels 0+) --</p>
+						<p>You are a typical caster.</p>
+						<br>
+						<p>-- Tier 2 - Mage (Levels 5+) --</p>
+						<p>Your become more intimidate with the weave through your core. You can identify magical effects (that are your tier or lower) by studying them. </p>
+						<br>
+						<p>-- Tier 3 - Sage (Levels 11+) --</p>
+						<p>Your spells become a reflection of your being, shaping their appearance. A spell you know becomes your signature spell and is changed slightly.</p>
+						<br>
+						<p>-- Tier 4 - Void Shell (Levels 17+) --</p>
+						<p>Your body is now just a mortal shell for your powerful soul. You can ascend.</p>
 					</div>
 				</div>
+			</section>
+			<section id="weapon_section">
+				<h2>Weapons</h2>
+				<hr>
+				<p>Physical damage types (pierce, bludge, slash) and lame restrictions and abailities are the basic whatevers of normal dnd weapons. <strong>I SAY NAY!</strong> I know this section looks long but its actually very simple and allows for way more mechanical expression for martials!</p>
+				<p>A weapon has four parts that contribute to its whole: its statistics, types, attributes, and special. Statistics are things like weapon damage and range. Type is a semantic categorization of the weapon. Attributes are how the weapon is designed to be used. A weapon's special can be a passive ability gained while weilding the weapon or a special attack that can replace a normal one.</p>
+				<h3>Statistics</h3>
+				<p>These are the typical aspects you might think of as a DND weapon. Here, we only care about weapon damage (dice and type: piercing / slashing / bluedgeoning), range, and weather it is melee or ranged, and if it requires ammunition.
+				<h3>Types</h3>
+				<p>Types are mostly used semantically and to help categorize the weapon. It also allows certain nebulous actions to be made with a weapon, such as breaching a door with a war axe or smashing a skeleton to dust with a club before a necromancer can animate it. Some weapons may have multiple types. Please note that the pros and cons are do not perfectly fit every weapon of its type. Use your best judgement.</p>
+				<table>
+					<thead>
+						<tr>
+							<th>Type Name</th>
+							<th>Examples</th>
+							<th>Common Pros</th>
+							<th>Common Cons</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Needling</td>
+							<td>Arrows, Daggers</td>
+							<td>Hit through gaps, strike fast, a lot of force at small point</td>
+							<td>Requires precision, blocked by thick or very strong material</td>
+						</tr>
+						<tr>
+							<td>Bashing</td>
+							<td>Hammer, Club</td>
+							<td>Good against heavy armor and thick material, large attack area, disabling foes</td>
+							<td>Must hit armor and not bypass it</td>
+						</tr>
+						<tr>
+							<td>Slicing</td>
+							<td>Swords</td>
+							<td>Most material besides heavy/hard, large active hitbox, cutting through/off</td>
+							<td>bad against hard material and stuff like chainmail</td>
+						</tr>
+						<tr>
+							<td>Cleaving</td>
+							<td>Axes</td>
+							<td>Splits hard and soft material, break bones</td>
+							<td>Charge-up or more force required</td>
+						</tr>
+						<tr>
+							<td>Rending</td>
+							<td>Serated, Toothed</td>
+							<td>Severe flesh tearing, very painful</td>
+							<td>weak to other armor, weakens slicing</td>
+						</tr>
+						<tr>
+							<td>Swinging</td>
+							<td>Whips, Meteor Hammers</td>
+							<td>Unpredictable, quick, area control</td>
+							<td>Bad for tight spaces, large wind up, high precision required</td>
+						</tr>
+						<tr>
+							<td>Puncture</td>
+							<td>Bullets, Picks</td>
+							<td>Go through any material, high damage no matter where struck</td>
+							<td>Requires precision, charge-up</td>
+						</tr>
+						<tr>
+							<td>Launcher</td>
+							<td>Bows, Guns</td>
+							<td>Meant for launching missiles at distance, more dependent on kind of launcher</td>
+							<td>Unable to be used in melee, more dependent on kind of launcher</td>
+						</tr>
+					</tbody>
+				</table>
+				<h3>Attributes</h3>
+				<p>Attributes are all about how a wepon handles and its uses. Most weapons will have 3-4 attributes (Must have only one handling attribute and then choose from the main attributes).</p>
+				<table>
+					<thead>
+						<tr>
+							<th>Attribute Name</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>--Handling Attributes--</td>
+							<td>**Pick one</td>
+						</tr>
+						<tr>
+							<td>One Handed</td>
+							<td>Needs only 1 Hand</td>
+						</tr>
+						<tr>
+							<td>Two Handed</td>
+							<td>Needs Both Hands</td>
+						</tr>
+						<tr>
+							<td>Versatile</td>
+							<td>Can be 1 or 2 Handed</td>
+						</tr>
+						<tr>
+							<td>--Main Attributes--</td>
+							<td>**Pick one or more</td>
+						</tr>
+						<tr>
+							<td>Close</td>
+							<td>Meant for close melee</td>
+						</tr>
+						<tr>
+							<td>Corded</td>
+							<td>On chain or rope</td>
+						</tr>
+						<tr>
+							<td>Polearm</td>
+							<td>Long reaching polearm</td>
+						</tr>
+						<tr>
+							<td>Loosing</td>
+							<td>Launches projectiles quickly</td>
+						</tr>
+						<tr>
+							<td>Loading</td>
+							<td>Launches projectiles after loading</td>
+						</tr>
+						<tr>
+							<td>Thrown</td>
+							<td>Thrown by hand</td>
+						</tr>
+						<tr>
+							<td>Hooked</td>
+							<td>Has a hook shape</td>
+						</tr>
+						<tr>
+							<td>Light</td>
+							<td>Easy wielding, less force</td>
+						</tr>
+						<tr>
+							<td>Heavy</td>
+							<td>Harder wielding, more force</td>
+						</tr>
+					</tbody>
+				</table>
+				<h3>Special</h3>
+				<p>Each weapon has a special move or passive effect more or less based on its types and attributes. The effect of the special is the core design priciple of the weapon; what it was built to excell at.</p>
+				<h3>Examples</h3>
+				<p>Lets make some weapons!</p>
+				<table>
+					<thead>
+						<tr>
+							<th>Weapon Name</th>
+							<th>Statistics</th>
+							<th>Types</th>
+							<th>Attributes</th>
+							<th>Special</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Compound Bow</td>
+							<td>Piercing 1d6, Range 30/60, Ammunition Arrow</td>
+							<td>Launcher</td>
+							<td>Two Handed, Loosing, Light</td>
+							<td>Quick Shot: bonus action second attack</td>
+						</tr>
+						<tr>
+							<td>Kopesh</td>
+							<td>Slashing 1d6, Melee 5</td>
+							<td>Slicing</td>
+							<td>One Handed, Close, Hooked, Light</td>
+							<td>Disarming Twist: STR/DEX contest to disarm a target while making attack</td>
+						</tr>
+						<tr>
+							<td>Horseman's Pick</td>
+							<td>Piercing 1d8, Melee 10</td>
+							<td>Puncture</td>
+							<td>Versatile, Polearm, Heavy</td>
+							<td>Force Dismount: mounted targets must CON save or fall off mount</td>
+						</tr>
+						<tr>
+							<td>Shuriken</td>
+							<td>Piercing 1d4, Range 30/60</td>
+							<td>Needling</td>
+							<td>One Handed, Thrown, Light</td>
+							<td>Hidden Strike: flip a coin to avoid being revealed from attacking</td>
+						</tr>
+						<tr>
+							<td>Nunchaku</td>
+							<td>Bludgeoning 1d6, Melee 5</td>
+							<td>Bashing</td>
+							<td>One Handed, Close, Corded, Light</td>
+							<td>Wrapple: You can grapple with your weapon. It becomes unusbale while grappling but you have advantage on your grapple contests.</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+			<section id="injury_section">
+				<h2>Injuries</h2>
+				<hr>
+				<p>After being put through the ringer, your characters may end up having lasting injuries. Injuries are long lastign and hard to remove conditions that negatively impact your character. They can be physical - ex. lost limb, magical - ex. mana deficiency, or mental - ex. insanity.</p>
+				<h3>Gaining an Injury</h3>
+				<p>An injury is gained after your character is reduced to 0 HP. Certain rare and powerful effects may also cause immediate injuries.</p>
+				<p>The kind of injury gained is dependent on the circumstances on how the injury was gained and with some randomness on my part as the DM. Players can infuence what inmjury they recieve with sugguestions if desired.</p>
+				<h3>Removing an Injury</h3>
+				<p>Unlike HP, resting does not heal injuries. Injuries have their own requirements for healing, but most can also be healed quickly with expensive medical treatment or powerful magic. Over time, certain injuries may change to lower, or higher tiers.</p>
+				<p>Lasting Injuries (as described in the next section) cannot be healed except by powerful magic. The effects of lasting injuries can be negated by items like prosthetics.</p>
+				<h3>Tiers and Effects</h3>
+				<p>There are four tiers of injury: Mild, Severe, Fatal, and Lasting.</p>
+				<p>You can have two mild injuries and one severe injury at a time. If a lower tier is full when you gain a new injury, it is pushed to the next tier. After severe, flip a coin to decide whether the injury if fatal or lasting.</p>
+				<p>Mild injuries cause a character to perform noteably worse in contexts related to the injury (examples: infected wound, elemental aversion).</p>
+				<p>Severe injuries impact all apects of the character (examples: shattered bone, insomnia).</p>
+				<p>Fatal injuries place a timer on the life of your character (examples: bleeding out, cracked core).</p>
+				<p>Lasting injuries are permanent and have a specific negative effect (example: lost limb, blindness).</p>
 			</section>
 		</main>
 	</body>
