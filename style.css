@@ -283,6 +283,12 @@ td {
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
+#extra_subclasses {
+	display: flex;
+}
+#extra_subclasses div {
+	width: 250px;
+}
 
 
 @media (min-width: 900px) {
