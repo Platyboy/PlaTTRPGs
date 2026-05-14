@@ -168,11 +168,6 @@ nav ul li {
 nav ul li:hover {
 	background: #ffffff60;
 }
-@media (max-width: 1200px) {
-	#page_title_heading {
-		font-size: 50px;
-	}
-}
 
 /* main style */
 main {
@@ -180,14 +175,6 @@ main {
 	padding: 3vh 3%;
 	min-height: calc(100vh - 30vh);
 	font-size: 18px;
-}
-@media (min-width: 900px) {
-	#homepage_main {
-		display: grid;
-		grid-template-columns: 48.5% 48.5%; 
-		grid-auto-rows: min-content;
-		column-gap: 3%;
-	}
 }
 h2 {
 	font-size: 32px;
@@ -276,4 +263,36 @@ td {
 }
 #core_tiers_div div {
 	width: 48%;
+}
+#classes_page_description {
+	grid-area: 1 / 1 / 2 / -1;
+}
+#class_main a {
+	border: 5px solid var(--main-color);
+	background: var(--trans-second-color);
+	padding: 0 6px 5px;
+	text-decoration: none;
+}
+#class_main a h2 {
+	background: none;
+}
+
+@media (min-width: 900px) {
+	#homepage_main {
+		display: grid;
+		grid-template-columns: 48.5% 48.5%; 
+		grid-auto-rows: min-content;
+		gap: 3%;
+	}
+	#class_main {
+		display: grid;
+		grid-template-columns: 32% 32% 32%;
+		grid-auto-rows: auto;
+		gap: 1%;
+	}
+}
+@media (max-width: 1200px) {
+	#page_title_heading {
+		font-size: 50px;
+	}
 }
