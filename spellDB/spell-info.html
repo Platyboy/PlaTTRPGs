@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>spell</title>
+    <title>Spell</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <a href="index.html">← Back to spells</a>
+    <a href="spell-compendium.html">← Back to Spell Compendium</a>
 
-    <div id="spell"></div>
+    <main id="spell"></main>
 
     <script>
 
         const params = new URLSearchParams(window.location.search);
+
         const id = Number(params.get("id"));
 
         fetch("spells.json")
@@ -26,31 +28,84 @@
 
                 const spell = spells.find(spell => spell.id === id);
 
+                const container = document.getElementById("spell");
+
                 if (!spell) {
-                    document.getElementById("spell").innerHTML =
-                        "<h1>spell not found</h1>";
+
+                    container.innerHTML = `
+                        <h1>Spell not found</h1>
+                    `;
 
                     return;
                 }
 
-                document.getElementById("spell").innerHTML = `
-                    <img
-                        class="detail-image"
-                        src="${spell.image}"
-                        alt="${spell.name}"
-                    >
+                const levelText =
+                    spell.level === 0
+                        ? "Cantrip"
+                        : `Level ${spell.level}`;
+
+                container.innerHTML = `
 
                     <h1>${spell.name}</h1>
 
-                    <p><strong>Category:</strong> ${spell.category}</p>
+                    <h2>
+                        ${levelText} ${spell.school}
+                    </h2>
 
-                    <p>${spell.description}</p>
+                    <hr>
+
+                    <p>
+                        <strong>Casting Time:</strong>
+                        ${spell.castingTime}
+                    </p>
+
+                    <p>
+                        <strong>Range:</strong>
+                        ${spell.range}
+                    </p>
+
+                    <p>
+                        <strong>Components:</strong>
+                        ${spell.components}
+                    </p>
+
+                    <p>
+                        <strong>Duration:</strong>
+                        ${spell.duration}
+                    </p>
+
+                    <p>
+                        <strong>Classes:</strong>
+                        ${spell.classes.join(", ")}
+                    </p>
+
+                    ${
+                        spell.damage
+                        ? `<p>
+                            <strong>Damage:</strong>
+                            ${spell.damage}
+                           </p>`
+                        : ""
+                    }
+
+                    <hr>
+
+                    <h2>Description</h2>
+
+                    <p>
+                        ${spell.description}
+                    </p>
                 `;
 
                 document.title = spell.name;
+
+            })
+            .catch(error => {
+                console.error("Could not load spells:", error);
             });
 
     </script>
 
 </body>
+
 </html>

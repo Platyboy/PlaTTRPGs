@@ -8,16 +8,28 @@ fetch("spells.json")
 
             const card = document.createElement("a");
 
-            card.className = "spell";
-            card.href = `spell.html?id=${spell.id}`;
+            card.className = "spell-card";
+            card.href = `spell-info.html?id=${spell.id}`;
+
+            const levelText =
+                spell.level === 0
+                    ? "Cantrip"
+                    : `Level ${spell.level}`;
 
             card.innerHTML = `
-                <img src="${spell.image}" alt="${spell.name}">
                 <h2>${spell.name}</h2>
-                <p>${spell.category}</p>
+
+                <p>
+                    ${levelText} ${spell.school}
+                </p>
+
+                <p>
+                    ${spell.classes.join(", ")}
+                </p>
             `;
 
             container.appendChild(card);
+
         });
 
     })
