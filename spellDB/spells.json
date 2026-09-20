@@ -1,0 +1,27 @@
+[
+    {
+        "id": "fireball",
+        "name": "Fireball",
+        "level": 3,
+        "school": "Evocation",
+        "classes": [ "Sorcerer", "Wizard" ],
+        "castingTime": "1 action",
+        "range": "150 feet",
+        "components": {
+            "verbal": true,
+            "somatic": true,
+            "material": true,
+            "materialDescription": "A tiny ball of bat guano and sulfur"
+        },
+        "duration": "Instantaneous",
+        "concentration": false,
+        "ritual": false,
+        "attackType": null,
+        "savingThrow": "Dexterity",
+        "damage":[ { "type": "Fire", "dice": "8d6" } ],
+        "conditions": [],
+        "tags": [ "Damage", "Area of Effect", "Fire" ],
+        "description": [ "A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. The damage increases by 1d6 for each slot level above 3rd." ],
+        "source": "Player's Handbook"
+    },
+]
