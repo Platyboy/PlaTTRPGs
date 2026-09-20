@@ -1,4 +1,4 @@
-fetch("items.json")
+fetch("spells.json")
     .then(response => response.json())
     .then(items => {
 
