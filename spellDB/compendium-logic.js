@@ -35,15 +35,7 @@ function displaySpells(spellsToDisplay) {
             .map(tag => '<span class="spell-tag">${tag}</span>')
             .join("");
 
-        spellCard.innerHTML = '
-            <h3>${spell.name}</h3>
-            <p class="spell-level-school">
-                ${getSpellLevel(spell.level)}
-                ${spell.school}
-            </p>
-            <div class="spell-tags">${tags}</div>
-            <p class="spell-classes">${spell.classes.join(", ")}</p>
-        ';
+        spellCard.innerHTML = '<h3>${spell.name}</h3><p class="spell-level-school">${getSpellLevel(spell.level)}${spell.school}</p><div class="spell-tags">${tags}</div><p class="spell-classes">${spell.classes.join(", ")}</p>';
 
         spellCard.addEventListener("click", () => {
             window.location.href = 'spell.html?id=${spell.id}';
