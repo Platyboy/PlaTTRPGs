@@ -1,20 +1,20 @@
 fetch("spells.json")
     .then(response => response.json())
-    .then(items => {
+    .then(spells => {
 
-        const container = document.getElementById("items");
+        const container = document.getElementById("spells");
 
-        items.forEach(item => {
+        spells.forEach(spell => {
 
             const card = document.createElement("a");
 
-            card.className = "item";
-            card.href = `item.html?id=${item.id}`;
+            card.className = "spell";
+            card.href = `spell.html?id=${spell.id}`;
 
             card.innerHTML = `
-                <img src="${item.image}" alt="${item.name}">
-                <h2>${item.name}</h2>
-                <p>${item.category}</p>
+                <img src="${spell.image}" alt="${spell.name}">
+                <h2>${spell.name}</h2>
+                <p>${spell.category}</p>
             `;
 
             container.appendChild(card);
@@ -22,5 +22,5 @@ fetch("spells.json")
 
     })
     .catch(error => {
-        console.error("Could not load items:", error);
+        console.error("Could not load spells:", error);
     });
