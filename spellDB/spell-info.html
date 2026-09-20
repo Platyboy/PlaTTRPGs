@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Item</title>
+    <title>spell</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <a href="index.html">← Back to items</a>
+    <a href="index.html">← Back to spells</a>
 
-    <div id="item"></div>
+    <div id="spell"></div>
 
     <script>
 
@@ -22,32 +22,32 @@
 
         fetch("spells.json")
             .then(response => response.json())
-            .then(items => {
+            .then(spells => {
 
-                const item = items.find(item => item.id === id);
+                const spell = spells.find(spell => spell.id === id);
 
-                if (!item) {
-                    document.getElementById("item").innerHTML =
-                        "<h1>Item not found</h1>";
+                if (!spell) {
+                    document.getElementById("spell").innerHTML =
+                        "<h1>spell not found</h1>";
 
                     return;
                 }
 
-                document.getElementById("item").innerHTML = `
+                document.getElementById("spell").innerHTML = `
                     <img
                         class="detail-image"
-                        src="${item.image}"
-                        alt="${item.name}"
+                        src="${spell.image}"
+                        alt="${spell.name}"
                     >
 
-                    <h1>${item.name}</h1>
+                    <h1>${spell.name}</h1>
 
-                    <p><strong>Category:</strong> ${item.category}</p>
+                    <p><strong>Category:</strong> ${spell.category}</p>
 
-                    <p>${item.description}</p>
+                    <p>${spell.description}</p>
                 `;
 
-                document.title = item.name;
+                document.title = spell.name;
             });
 
     </script>
