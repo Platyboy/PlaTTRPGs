@@ -1,0 +1,37 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Times New Roman", Times, serif;
+}
+/* color theme */
+:root {
+	--main-color: #c2a68c;
+	--second-color: #e6d8c3;
+	--space-color: #f5f5f0;
+	--accent-color: #5d866c;
+	--text-color: #334443;
+	--trans-main-color: #c2a68c30;
+	--trans-second-color: #e6d8c330;
+	--trans-space-color: #f5f5f030;
+	--trans-accent-color: #5d866c30;
+	--trans-text-color: #33444330;
+}
+
+h1 {
+    color: var(--text-color);
+    font-size: 22px;
+}
+
+p {
+    color: var(--text-color);
+    font-size: 12px;
+}
+
+#filters {
+    border: 1px solid black;
+}
+
+#spells {
+    border: 1px solid black;
+}
