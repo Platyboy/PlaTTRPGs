@@ -18,7 +18,8 @@
 
         const params = new URLSearchParams(window.location.search);
 
-        const id = Number(params.get("id"));
+        const id = params.get("id");
+        
 
         fetch("spells.json")
             .then(response => response.json())
