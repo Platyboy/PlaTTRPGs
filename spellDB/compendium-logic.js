@@ -11,32 +11,36 @@ fetch("spells.json")
 
         function displaySpells() {
 
-            // Get the current filter selections
             const selectedLevel = levelFilter.value;
             const selectedClass = classFilter.value;
             const selectedSchool = schoolFilter.value;
 
-
-            // Filter the spells
             const filteredSpells = spells.filter(spell => {
 
+                // Level filter
                 const levelMatches =
                     selectedLevel === "all" ||
-                    spell.level === Number(selectedLevel);
+                    spell.level === parseInt(selectedLevel);
 
+
+                // Class filter
                 const classMatches =
                     selectedClass === "all" ||
                     spell.classes.includes(selectedClass);
 
+
+                // School filter
                 const schoolMatches =
                     selectedSchool === "all" ||
                     spell.school === selectedSchool;
 
+
+                // The spell must pass ALL filters
                 return levelMatches && classMatches && schoolMatches;
             });
 
 
-            // Remove the old spell cards
+            // Clear the current spell cards
             container.innerHTML = "";
 
 
@@ -66,7 +70,6 @@ fetch("spells.json")
                 `;
 
                 container.appendChild(card);
-
             });
         }
 
