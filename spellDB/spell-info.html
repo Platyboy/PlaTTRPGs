@@ -49,7 +49,7 @@
                     <h1>${spell.name}</h1>
 
                     <h2>
-                        ${levelText} ${spell.school}
+                        Level ${levelText} ${spell.school}
                     </h2>
 
                     <hr>
@@ -78,15 +78,6 @@
                         <strong>Classes:</strong>
                         ${spell.classes.join(", ")}
                     </p>
-
-                    ${
-                        spell.damage
-                        ? `<p>
-                            <strong>Damage:</strong>
-                            ${spell.damage}
-                           </p>`
-                        : ""
-                    }
 
                     <hr>
 

@@ -9,8 +9,7 @@
         "components": "V, S",
         "duration": "Instantaneous",
         "classes": ["Sorcerer", "Wizard"],
-        "description": "You hurl a mote of fire at a creature or object within range.",
-        "damage": "1d10 fire"
+        "description": "You hurl a mote of fire at a creature or object within range."
     },
     {
         "id": 2,
@@ -22,8 +21,7 @@
         "components": "V, S",
         "duration": "Instantaneous",
         "classes": ["Sorcerer", "Wizard"],
-        "description": "You create three glowing darts of magical force. Each dart hits a creature of your choice that you can see within range.",
-        "damage": "1d4 + 1 force per dart"
+        "description": "You create three glowing darts of magical force. Each dart hits a creature of your choice that you can see within range."
     },
     {
         "id": 3,
@@ -35,8 +33,7 @@
         "components": "V, S",
         "duration": "1 round",
         "classes": ["Sorcerer", "Wizard"],
-        "description": "An invisible barrier of magical force appears and protects you.",
-        "damage": null
+        "description": "An invisible barrier of magical force appears and protects you."
     },
     {
         "id": 4,
@@ -48,7 +45,6 @@
         "components": "V, S",
         "duration": "Instantaneous",
         "classes": ["Bard", "Cleric", "Druid", "Paladin", "Ranger"],
-        "description": "A creature you touch regains a number of hit points.",
-        "damage": null
+        "description": "A creature you touch regains a number of hit points."
     }
 ]
