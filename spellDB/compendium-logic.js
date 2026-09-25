@@ -9,42 +9,39 @@ fetch("spells.json")
         const schoolFilter = document.getElementById("schoolFilter");
 
 
-        function displaySpells() {
+        function updateSpellList() {
 
-            const selectedLevel = levelFilter.value;
-            const selectedClass = classFilter.value;
-            const selectedSchool = schoolFilter.value;
+            // Get the current values of the filters
+            const level = levelFilter.value;
+            const className = classFilter.value;
+            const school = schoolFilter.value;
 
+
+            // Find spells that match the filters
             const filteredSpells = spells.filter(spell => {
 
-                // Level filter
-                const levelMatches =
-                    selectedLevel === "all" ||
-                    spell.level === parseInt(selectedLevel);
+                const matchesLevel =
+                    level === "all" ||
+                    spell.level === Number(level);
 
+                const matchesClass =
+                    className === "all" ||
+                    spell.classes.includes(className);
 
-                // Class filter
-                const classMatches =
-                    selectedClass === "all" ||
-                    spell.classes.includes(selectedClass);
+                const matchesSchool =
+                    school === "all" ||
+                    spell.school === school;
 
-
-                // School filter
-                const schoolMatches =
-                    selectedSchool === "all" ||
-                    spell.school === selectedSchool;
-
-
-                // The spell must pass ALL filters
-                return levelMatches && classMatches && schoolMatches;
+                return matchesLevel && matchesClass && matchesSchool;
             });
 
 
-            // Clear the current spell cards
+            // IMPORTANT:
+            // Remove the old list
             container.innerHTML = "";
 
 
-            // Create cards for the filtered spells
+            // Build the new list
             filteredSpells.forEach(spell => {
 
                 const card = document.createElement("a");
@@ -74,14 +71,19 @@ fetch("spells.json")
         }
 
 
-        // Run the filter whenever a dropdown changes
-        levelFilter.addEventListener("change", displaySpells);
-        classFilter.addEventListener("change", displaySpells);
-        schoolFilter.addEventListener("change", displaySpells);
+        // --------------------------------
+        // WATCH FOR FILTER CHANGES
+        // --------------------------------
+
+        levelFilter.addEventListener("change", updateSpellList);
+
+        classFilter.addEventListener("change", updateSpellList);
+
+        schoolFilter.addEventListener("change", updateSpellList);
 
 
-        // Display all spells when the page first loads
-        displaySpells();
+        // Display the initial list
+        updateSpellList();
 
     })
     .catch(error => {
