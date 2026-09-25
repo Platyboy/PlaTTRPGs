@@ -55,15 +55,13 @@ fetch("spells.json")
                         : `Level ${spell.level}`;
 
                 card.innerHTML = `
-                    <h2>${spell.name}</h2>
-
-                    <p>
-                        ${levelText} ${spell.school}
-                    </p>
-
-                    <p>
-                        ${spell.classes.join(", ")}
-                    </p>
+                    <p>${spell.name}</p>
+                    <p>${levelText} ${spell.school}</p>
+                    <p>${spell.classes.join(", ")}</p>
+                    <p>${spell.castingTime}</p>
+                    <p>${spell.range}</p>
+                    <p>${spell.components}</p>
+                    <p>${spell.duration}</p>
                 `;
 
                 container.appendChild(card);

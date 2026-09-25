@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": "fire-bolt",
         "name": "Fire Bolt",
         "level": 0,
         "school": "Evocation",
@@ -12,7 +12,7 @@
         "description": "You hurl a mote of fire at a creature or object within range."
     },
     {
-        "id": 2,
+        "id": "magic-missile",
         "name": "Magic Missile",
         "level": 1,
         "school": "Evocation",
@@ -24,7 +24,7 @@
         "description": "You create three glowing darts of magical force. Each dart hits a creature of your choice that you can see within range."
     },
     {
-        "id": 3,
+        "id": "shield",
         "name": "Shield",
         "level": 1,
         "school": "Abjuration",
@@ -36,7 +36,7 @@
         "description": "An invisible barrier of magical force appears and protects you."
     },
     {
-        "id": 4,
+        "id": "cure-wounds",
         "name": "Cure Wounds",
         "level": 1,
         "school": "Evocation",
